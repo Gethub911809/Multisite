@@ -13,7 +13,7 @@ main {
     padding: 20px;
     text-align: center;
 }
-.testflex {
+.postflex {
     margin-left: calc(10vw - 20px);
     display: flex;
     position: relative;
@@ -27,11 +27,10 @@ main {
 .postimage{
     display: flex;
     height:20vw;
-
     position: absolute;
     background-color: #333;
-    top: 1vh;
-    z-index: 10;
+    top: 5vh;
+    z-index: 2;
 }
 .posttext{
     position: absolute;
@@ -51,4 +50,26 @@ main {
   font-size: 17px;
   width: 10vw;
   height:5vh;
+  border-radius:8px;
+}
+.tablink:hover {box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)}
+.tablink span {
+  position: relative;
+  display: inline-block;
+}
+.tablink:active span {
+  top: 2px; /* Shifts only the text down */
+}
+.section{
+    position: absolute;
+    top:1vh;
+    z-index: 3;
+}
+.section h3{
+    padding:0px;
+    margin:0px;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
 }

@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head >
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
   <title>My Website</title>
 </head>
-<body>
+<body onload="openPage('Home')">
   <header>
-    <h1>Welcome to My Website</h1>
-    <button class="tablink" onclick="openPage('Home', this)">Home</button>
-    <button class="tablink" onclick="openPage('Coding', this)">Coding</button>
-    <button class="tablink" onclick="openPage('Rocketry', this)">Rocketry</button>
-    <button class="tablink" onclick="openPage('3D printing', this)">3D printing</button>
+    <h1>Welcome to the Multisite</h1>
+    <button class="tablink" onclick="openPage('Home')"><span>Home</span></button>
+    <button class="tablink" onclick="openPage('Coding')"><span>Coding</span></button>
+    <button class="tablink" onclick="openPage('Rocketry')"><span>Rocketry</span></button>
+    <button class="tablink" onclick="openPage('3D printing')"><span>3D printing</span></button>
+    <button class="tablink" onclick="openPage('Film')"><span>Film</span></button>
   </header>
   <main>
     <div id="Home" class="tabcontent">
-      <div class="testflex">
-          <div class="postimage">
-            <img class="image"src="rockettest.jpeg" alt="" width="500" height="250">
-          </div>
-          <p class="posttext">This is the place where text will go.</p>
+      <div class="postflex">
+        <div class="section">
+          <a href="#" onclick="openPage('Coding')"><h3>Section goes here (Coding)</h3></a>
+        </div>      
+        <div class="postimage">
+          <img class="image" src="rockettest.jpeg" alt="" width="500" height="250">
+        </div>
+        <p class="posttext">This is the place where text will go.</p>
       </div>
     </div>
-    <div id="News" class="tabcontent">
-      <h3>News</h3>
+    <div id="Coding" class="tabcontent">
+      <h3>Coding</h3>
       <p>Some news this fine day!</p>
     </div>
   </main>
