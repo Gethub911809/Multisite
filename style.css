@@ -11,10 +11,10 @@ header {
 }
 main {
     padding: 20px;
-    margin-left: calc(10vw - 20px);
     text-align: center;
 }
 .testflex {
+    margin-left: calc(10vw - 20px);
     display: flex;
     position: relative;
     justify-content: center;
@@ -44,3 +44,11 @@ main {
     height: 100%;
 }
 
+.tablink {
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+  width: 10vw;
+  height:5vh;
+}
