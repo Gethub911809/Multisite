@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Multisite Section</title>
+</head>
+<body>
+  <header>
+    <h1>Multisite Section</h1>
+    <nav class="site-nav">
+      <a class="button" href="index.html">Home</a>
+      <a class="button" href="multisite.html">Multisite</a>
+    </nav>
+    <div class="tab-buttons">
+      <button id="defaultOpen" class="tablink" onclick="openPage('Home')"><span>Home</span></button>
+      <button class="tablink" onclick="openPage('Coding')"><span>Coding</span></button>
+      <button class="tablink" onclick="openPage('Rocketry')"><span>Rocketry</span></button>
+      <button class="tablink" onclick="openPage('3D printing')"><span>3D printing</span></button>
+      <button class="tablink" onclick="openPage('Film')"><span>Film</span></button>
+    </div>
+  </header>
+  <main>
+    <div id="Home" class="tabcontent">
+      <div class="postflex">
+        <div class="section">
+          <a href="#" onclick="openPage('Coding')"><h3>Section goes here (Coding)</h3></a>
+        </div>
+        <div class="postimage">
+          <img class="image" src="rockettest.jpeg" alt="Rocket test image" width="500" height="250">
+        </div>
+        <p class="posttext">This is the place where text will go.</p>
+      </div>
+    </div>
+    <div id="Coding" class="tabcontent">
+      <h3>Coding</h3>
+      <p>Some news this fine day!</p>
+    </div>
+    <div id="Rocketry" class="tabcontent">
+      <h3>Rocketry</h3>
+      <p>Rocketry updates will appear here.</p>
+    </div>
+    <div id="3D printing" class="tabcontent">
+      <h3>3D printing</h3>
+      <p>3D printing content will appear here.</p>
+    </div>
+    <div id="Film" class="tabcontent">
+      <h3>Film</h3>
+      <p>Film related updates will appear here.</p>
+    </div>
+  </main>
+</body>
+</html>
