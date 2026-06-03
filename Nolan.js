@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       loggedFill.style.width = loggedPercent.toFixed(1) + '%';
     }
     if (totalPercentEl) {
-      totalPercentEl.textContent = loggedPercent.toFixed(1) + '% of total hours';
+      totalPercentEl.textContent = loggedPercent.toFixed(1) + '% of total logged hours';
     }
 
     // show "logged/data logged" above the percentage

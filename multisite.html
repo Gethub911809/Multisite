@@ -12,10 +12,9 @@
     <h1>Multisite Section</h1>
     <nav class="site-nav">
       <a class="button" href="index.html">Home</a>
-      <a class="button" href="multisite.html">Multisite</a>
     </nav>
     <div class="tab-buttons">
-      <button id="defaultOpen" class="tablink" onclick="openPage('Home')"><span>Home</span></button>
+      <button id="defaultOpen" class="tablink" onclick="openPage('New')"><span>New</span></button>
       <button class="tablink" onclick="openPage('Coding')"><span>Coding</span></button>
       <button class="tablink" onclick="openPage('Rocketry')"><span>Rocketry</span></button>
       <button class="tablink" onclick="openPage('3D printing')"><span>3D printing</span></button>
@@ -23,15 +22,15 @@
     </div>
   </header>
   <main>
-    <div id="Home" class="tabcontent">
+    <div id="New" class="tabcontent">
       <div class="postflex">
         <div class="section">
-          <a href="#" onclick="openPage('Coding')"><h3>Section goes here (Coding)</h3></a>
+          <a href="rocketry_radio_update_june2nd26.html"><h3>How to connect a RMF69 433MHz module to a Pico 2(Rocketry)</h3></a>
         </div>
         <div class="postimage">
-          <img class="image" src="rockettest.jpeg" alt="Rocket test image" width="500" height="250">
+          <img class="image" src="RFM69HCW 433MHz.png" alt="Rocket test image" width="500" height="250" style="padding: 20px;">
         </div>
-        <p class="posttext">This is the place where text will go.</p>
+        <p class="posttext">In this guide, we will walk through the process of connecting an RFM69HCW 433MHz radio module to a Raspberry Pi Pico 2.</p>
       </div>
     </div>
     <div id="Coding" class="tabcontent">
@@ -51,5 +50,6 @@
       <p>Film related updates will appear here.</p>
     </div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

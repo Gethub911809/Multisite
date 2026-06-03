@@ -1,10 +1,10 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(218, 242, 255);
 }
 header {
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(148, 143, 143);
     color: white;
     padding: 20px;
     text-align: center;
@@ -86,7 +86,6 @@ main {
     display: flex;
     height:20vw;
     position: absolute;
-    background-color: #333;
     top: 5vh;
     z-index: 2;
 }

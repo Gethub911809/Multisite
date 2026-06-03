@@ -18,8 +18,10 @@ function openPage(pageName) {
   }
 }
 
-// If the page has a defaultOpen tab, click it.
-var defaultOpen = document.getElementById("defaultOpen");
-if (defaultOpen) {
-  defaultOpen.click();
-}
+// Open the default tab after the DOM has loaded.
+window.addEventListener("DOMContentLoaded", function() {
+  var defaultOpen = document.getElementById("defaultOpen");
+  if (defaultOpen) {
+    defaultOpen.click();
+  }
+});
