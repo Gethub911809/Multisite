@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
   const projects = Array.from(document.querySelectorAll('.project[data-hours]'));
+
+  // Sort projects by logged hours (descending) so highest time appears first
+  projects.sort(function (a, b) {
+    const aHours = Number(a.dataset.loggedHours ?? a.dataset.hours ?? 0);
+    const bHours = Number(b.dataset.loggedHours ?? b.dataset.hours ?? 0);
+    return bHours - aHours;
+  });
+
+  // Re-append projects in sorted order to their parent container
+  if (projects.length > 0) {
+    const parent = projects[0].parentNode;
+    if (parent) {
+      projects.forEach(function (p) {
+        parent.appendChild(p);
+      });
+    }
+  }
   // Calculate total logged hours across all projects (use data-logged-hours)
   const totalLoggedHours = projects.reduce(function (sum, project) {
     return sum + Number(project.dataset.loggedHours || 0);

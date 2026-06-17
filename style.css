@@ -3,12 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(218, 242, 255);
 }
-header {
-    background-color: rgb(148, 143, 143);
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+
 main {
     padding: 20px;
     text-align: center;
@@ -55,133 +50,56 @@ main {
     font-size: 1.1rem;
 }
 
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 8px 0;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.25s ease;
+}
+
 .contributors-list {
     list-style: none;
     padding: 0;
-    margin: 32px auto;
-    max-width: 380px;
-    text-align: left;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    margin: 0 auto 24px;
+    display: inline-flex;
+    justify-content: center;
 }
 
 .contributors-list li {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 12px 16px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    margin: 0;
 }
-.postflex {
-    margin-left: calc(10vw - 20px);
-    display: flex;
-    position: relative;
-    justify-content: center;
+
+.contributors-list li a {
+    display: inline-flex;
     align-items: center;
-    height: 60vh;
-    width:80vw;
-    background-color: #b32121;
-    border-radius: 10px;
-}
-.postimage{
-    display: flex;
-    height:20vw;
-    position: absolute;
-    top: 5vh;
-    z-index: 2;
-}
-.posttext{
-    position: absolute;
-    bottom:2vh;
-    z-index: 1;
+    justify-content: center;
+    min-width: 180px;
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.2s ease;
 }
 
-.image{
-    width: 100%;
-    height: 100%;
-}
-
-.tablink {
-  background-color: #555;
-  color: white;
-  cursor: pointer;
-  font-size: 17px;
-  width: 10vw;
-  height:5vh;
-  border-radius:8px;
-}
-.tablink:hover {box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)}
-.tablink span {
-  position: relative;
-  display: inline-block;
-}
-.tablink:active span {
-  top: 2px; /* Shifts only the text down */
-}
-.section{
-    position: absolute;
-    top:1vh;
-    z-index: 3;
-}
-.section h3{
-    padding:0px;
-    margin:0px;
-}
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-footer{
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  background-color: #333;
-  color: white;
-  left: 0;
-  text-align: center;
-}
-
-.site-nav,
-.home-nav {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 15px;
-}
-
-.home-section {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 40px 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-}
-
-.button {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 8px 0;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.25s ease;
+.contributors-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
 }
 
 .button:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
-.tab-buttons {
-  margin-top: 16px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+.button:hover {
+    background-color: #555;
 }
 
-.tabcontent {
-  display: none;
-  padding: 20px 0;
+a {
+    color: inherit;
+    text-decoration: underline;
 }

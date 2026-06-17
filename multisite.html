@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="multisite.css">
   <title>Multisite Section</title>
 </head>
 <body>
@@ -23,33 +22,73 @@
   </header>
   <main>
     <div id="New" class="tabcontent">
-      <div class="postflex">
-        <div class="section">
-          <a href="rocketry_radio_update_june2nd26.html"><h3>How to connect a RMF69 433MHz module to a Pico 2(Rocketry)</h3></a>
-        </div>
-        <div class="postimage">
-          <img class="image" src="RFM69HCW 433MHz.png" alt="Rocket test image" width="500" height="250" style="padding: 20px;">
-        </div>
-        <p class="posttext">In this guide, we will walk through the process of connecting an RFM69HCW 433MHz radio module to a Raspberry Pi Pico 2.</p>
+      <h2>Latest posts</h2>
+      <div class="section-posts" id="section-new">
+        <p>Loading latest posts...</p>
       </div>
     </div>
     <div id="Coding" class="tabcontent">
-      <h3>Coding</h3>
-      <p>Some news this fine day!</p>
+      <h2>Coding posts</h2>
+      <div class="section-posts" id="section-coding">
+        <p>Loading coding posts...</p>
+      </div>
     </div>
     <div id="Rocketry" class="tabcontent">
-      <h3>Rocketry</h3>
-      <p>Rocketry updates will appear here.</p>
+      <h2>Rocketry posts</h2>
+      <div class="section-posts" id="section-rocketry">
+        <p>Loading rocketry posts...</p>
+      </div>
     </div>
     <div id="3D printing" class="tabcontent">
-      <h3>3D printing</h3>
-      <p>3D printing content will appear here.</p>
+      <h2>3D printing posts</h2>
+      <div class="section-posts" id="section-3d-printing">
+        <p>Loading 3D printing posts...</p>
+      </div>
     </div>
     <div id="Film" class="tabcontent">
-      <h3>Film</h3>
-      <p>Film related updates will appear here.</p>
+      <h2>Film posts</h2>
+      <div class="section-posts" id="section-film">
+        <p>Loading film posts...</p>
+      </div>
     </div>
   </main>
+  <div id="post-index" style="display: none;">
+    <a class="post-link" href="rocketry_radio_update_june2nd26.html">How to connect a RMF69 433MHz module to a Pico 2 (Rocketry)</a>
+    <a class="post-link"
+          href="https://gethub911809.github.io/Random-Rocket/"
+          data-title="Random Rocket"
+          data-description="A webpage where you can view media from NASA's immage, video, and audio library "
+          data-date="2026-06-7"
+          data-section="Rocketry"
+          data-image="Random-Rocket-Preview.png">
+          Random Rocket
+    </a>
+    <!-- Add more post links here.
+         For GitHub Pages or other external URLs, use data attributes to include metadata:
+         data-title, data-description, data-date, data-section, data-image.
+         Example for GitHub Pages:
+         <a class="post-link"
+            href="https://gethub911809.github.io/Random-Rocket/"
+            data-title="Random Rocket"
+            data-description="A GitHub Pages project about rockets."
+            data-date="2026-06-17"
+            data-section="Rocketry"
+            data-image="https://gethub911809.github.io/Random-Rocket/preview.png">
+           Random Rocket
+         </a>
+
+         Example for a local file (when opening multisite.html with file://):
+         <a class="post-link"
+            href="local-page.html"
+            data-title="Local Project"
+            data-description="A local HTML page example."
+            data-date="2026-06-17"
+            data-section="Coding"
+            data-image="local-image.png">
+           Local Project
+         </a>
+    -->
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
