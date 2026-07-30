@@ -59,3 +59,28 @@ ol {
   border-radius: 8px;
   transition: background-color 0.25s ease;
 }
+main div .image-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 1rem 0;
+}
+
+main div .image-row img,
+main div > .content-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+}
+
+main div .image-row img {
+    flex: 0 0 calc(50% - 6px);
+    width: calc(50% - 6px);
+}
+
+main div > .content-image {
+    margin: 1rem 0;
+    width: 100%;
+}
