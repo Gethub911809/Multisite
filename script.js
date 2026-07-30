@@ -76,10 +76,22 @@ function createPostCard(post) {
     card.appendChild(imageWrapper);
   }
 
+  var copyBlock = document.createElement("div");
+  copyBlock.className = "post-copy";
+
   var excerpt = document.createElement("p");
   excerpt.className = "posttext";
   excerpt.textContent = post.description || "Read the full post to learn more.";
-  card.appendChild(excerpt);
+  copyBlock.appendChild(excerpt);
+
+  if (post.author) {
+    var authorLine = document.createElement("p");
+    authorLine.className = "post-author";
+    authorLine.textContent = "By " + post.author;
+    copyBlock.appendChild(authorLine);
+  }
+
+  card.appendChild(copyBlock);
 
   return card;
 }
@@ -111,6 +123,7 @@ function getPostMetadataFromLink(link) {
   var title = link.dataset.title || link.textContent || href;
   var description = link.dataset.description ? link.dataset.description.trim() : "";
   var type = link.dataset.section ? link.dataset.section.trim() : "";
+  var author = link.dataset.author ? link.dataset.author.trim() : "";
   var dateValue = link.dataset.date ? link.dataset.date.trim() : null;
   var image = link.dataset.image ? getAbsoluteUrl(link.dataset.image) : null;
 
@@ -119,6 +132,7 @@ function getPostMetadataFromLink(link) {
     title: title.trim(),
     description: description.trim(),
     type: type || null,
+    author: author || null,
     date: parseDate(dateValue),
     image: image,
     hasMetadata: Object.keys(link.dataset).length > 0
@@ -138,6 +152,7 @@ async function fetchPostMetadata(href) {
 
     var metaDate = doc.querySelector('meta[name="datePublished"], meta[property="article:published_time"]');
     var metaType = doc.querySelector('meta[name="articleSection"], meta[name="postType"], meta[property="article:section"]');
+    var metaAuthor = doc.querySelector('meta[name="author"], meta[property="article:author"]');
     var titleMeta = doc.querySelector('meta[name="title"]');
     var descriptionMeta = doc.querySelector('meta[name="description"]');
     var imageMeta = doc.querySelector('meta[property="og:image"], meta[name="image"], link[rel="image_src"]');
@@ -146,6 +161,7 @@ async function fetchPostMetadata(href) {
     var description = descriptionMeta ? descriptionMeta.getAttribute("content") : (doc.querySelector("p") ? doc.querySelector("p").textContent : "");
     var dateValue = metaDate ? metaDate.getAttribute("content") : null;
     var typeValue = metaType ? metaType.getAttribute("content") : null;
+    var authorValue = metaAuthor ? metaAuthor.getAttribute("content") : null;
     var imageUrl = imageMeta ? imageMeta.getAttribute("content") : null;
 
     if (!imageUrl) {
@@ -161,6 +177,7 @@ async function fetchPostMetadata(href) {
       description: description.trim(),
       date: parseDate(dateValue),
       type: typeValue ? typeValue.trim() : null,
+      author: authorValue ? authorValue.trim() : null,
       image: imageUrl ? getAbsoluteUrl(imageUrl) : null
     };
   } catch (error) {
@@ -199,6 +216,7 @@ async function loadLatestPosts() {
         description: localMeta.description || remoteMeta.description,
         date: localMeta.date || remoteMeta.date,
         type: localMeta.type || remoteMeta.type,
+        author: localMeta.author || remoteMeta.author,
         image: localMeta.image || remoteMeta.image
       };
     });

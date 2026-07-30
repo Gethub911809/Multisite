@@ -41,6 +41,13 @@ main {
     text-transform: capitalize;
 }
 
+.post-author {
+    margin: 6px 0;
+    color: #828282;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
 .postflex.latest {
     margin: 24px auto;
     width: 80vw;
@@ -98,10 +105,19 @@ main {
     z-index: 2;
 }
 
-.posttext {
+.post-copy {
     position: absolute;
     bottom: 2vh;
+    left: 20px;
+    right: 20px;
     z-index: 1;
+    text-align: center;
+    color: black;
+}
+
+.posttext,
+.post-author {
+    margin: 0 0 6px;
 }
 
 .image {
