@@ -21,3 +21,7 @@ And the contributors page will lead you to a list of contributors which will hav
 To add to this page there are comments explaining the requirements in the multisite.html file. You can create a separate page and add the according meta data and then send a push request. You can also create a new folder in the documents folder and create your own html file and then link to the html file in multisite.html file. There are multiple examples on how to upload your page within the multisite.html file.
 
 ![Comments on how to add to multisite](Adding-pages-to-multisite.png)
+
+# Running locally 
+
+To run this project locally you need to clone the repo using <code>git clone https://github.com/Gethub911809/Multisite</code> in your terminal. This will clone the repo allowing you to run all of the html files on your computer. To get to the welcome page open the index.html file within your browser or your files and the website should pop up. All of the buttons should work correctly and you will be able to visit each page.
